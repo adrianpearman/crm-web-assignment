@@ -1,5 +1,8 @@
 <h1>All Contacts</h1>
 
+<h2>
+  First and Last Names
+</h2>
 <ul>
 <% Contact.all.each do |contact| %>
   <li>
@@ -9,6 +12,9 @@
 <% end %>
 </ul>
 
+<h2>
+  Email and Notes
+</h2>
 <ul>
   <% Contact.all.each do |contact| %>
   <li>

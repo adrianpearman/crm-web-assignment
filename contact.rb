@@ -109,10 +109,10 @@ class Contact
 
 end
 
-Contact.create("Adrian","Long","1234@mfmfm.com")
-Contact.create("George","Ping","pretzel@thristy.com")
-Contact.create("Jerry","Ring","whats@thedeal.com")
-Contact.create("Elaine","Hi","nosoup@foryou.com")
+Contact.create("Adrian","Pearman","adrianpearman12@gmail.com", 'Hello!')
+Contact.create("George","Costanza","pretzel@thristy.com", "I was in the pool!")
+Contact.create("Jerry","Seinfeld","whats@thedeal.com", "What's the deal!")
+Contact.create("Elaine","Benes","nosoup@foryou.com", "It shrinks?")
 Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
 Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
 Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
