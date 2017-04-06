@@ -13,6 +13,7 @@ get'/' do
 end
 
 get '/contacts'do
+@crm_contact_name = "Bitmaker CRM"
   erb :contacts
 end
 
@@ -22,5 +23,5 @@ end
 
 post '/contacts'do
   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
-  redirect to('/contacts')
+  redirect t ('/contact')
 end

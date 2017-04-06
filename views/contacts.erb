@@ -1,27 +1,40 @@
-<h1>All Contacts</h1>
+<header>
+  <h1> <%= @crm_contact_name %> </h1>
+</header>
 
-<h2>
-  First and Last Names
+<div>
+  <li class="home_nav"><a href="/">Home</a></li>
+  <li class="home_nav">Main Menu</li>
+  <li class="home_nav">About</li>
+</div>
+
+<h2 class="contact_info">
+  Contact Information
 </h2>
 <ul>
 <% Contact.all.each do |contact| %>
-  <li>
+  <li class="contact_details">
   <%= contact.first_name %>
   <%= contact.last_name %>
-  </li>
+  (<%= contact.email %>)
+  <p class="contact_editor"><a href="#">Edit</a> | <a href="#">Delete</a></p>
+</li>
 <% end %>
 </ul>
 
 <h2>
-  Email and Notes
+  Notes
 </h2>
 <ul>
   <% Contact.all.each do |contact| %>
   <li>
-    <%= contact.email %>
     <%= contact.note  %>
   </li>
   <% end %>
 </ul>
 
 <li><a href="/contacts/new">Add a New Contact</a></li>
+<a href="/">Back to Main Menu</a>
+<footer>
+<p>© Bitmaker 2017</p>
+</footer>

@@ -1,10 +1,3 @@
-# Copy your entire Contact class from the old crm assignment here.
-# Then, run the following at the command line:
-#
-#   ruby test/contact_test.rb
-#
-# If your implementation of the Contact class is 'right', then you should see that all tests pass!
-
 class Contact
 
   attr_reader :id
@@ -44,7 +37,7 @@ class Contact
         return contact
       end
     end
-    return 'Doesn\'t exist in the list'
+    return 'Dosn\'t ext'
   end
 
   # This method should allow you to specify
@@ -53,9 +46,8 @@ class Contact
   # and then make the appropriate change to the contact
 
   #
-  def self.update(id, variable, value)
+  def update(variable, value)
     @@contacts.each do |name|
-    if id == name.id
       case variable
       when "first_name"
         name.first_name = value
@@ -66,7 +58,6 @@ class Contact
       when "note"
         name.note = value
       end
-    end
   end
   end
 
@@ -102,12 +93,16 @@ class Contact
   # This method should delete the contact
   # HINT: Check the Array class docs for built-in methods that might be useful here
   def delete
-
+    Contact.all.delete(self)
   end
 
   # Feel free to add other methods here, if you need them.
+  def full_name
+    return "#{@first_name} #{@last_name}"
+  end
 
 end
+
 
 Contact.create("Adrian","Pearman","adrianpearman12@gmail.com", 'Hello!')
 Contact.create("George","Costanza","pretzel@thristy.com", "I was in the pool!")
