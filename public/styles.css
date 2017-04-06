@@ -76,6 +76,10 @@ h2.contact_info {
   background-color: #FE8171;
 }
 
+.home_pictures{
+  width: 600px;
+}
+
 p.contact_editor {
     margin: 5px;
     padding: 10px;
