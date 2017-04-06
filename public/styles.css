@@ -4,9 +4,10 @@
 
 
 html{
+  font-size: 16px;
   text-align: center;
   font-family: arial, sans-serif;
-  font-weight: 1.5em;
+  font-weight: 4.5em;
   margin-top: 0;
 }
 
@@ -59,13 +60,16 @@ h2.contact_info {
 .home_nav{
   background-color: #D3D3D3;
   color: white;
-  margin: 5px;
+  margin: 8px;
   width: 100%;
   padding: 9px;
 }
 
 .contact_details{
   background-color: #2AE0D0;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 9px;
 }
 
 .contact_info{
