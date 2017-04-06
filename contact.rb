@@ -31,13 +31,20 @@ class Contact
 
   # This method should accept an id as an argument
   # and return the contact who has that id
-  def self.find(contactid)
-    @@contacts.each do |contact|
-      if contact.id == contactid
-        return contact
+  def self.find(id)
+    # {|contact| contact.id == id}
+
+    @@contacts.find do |contact|
+      if contact.id == id
+        return contact.id
+        end
       end
-    end
-    return 'Dosn\'t ext'
+    return 'Contact does not exist'
+  end
+
+  def self.count
+      contact = @@contacts
+      return contact.count
   end
 
   # This method should allow you to specify
@@ -104,6 +111,7 @@ class Contact
 end
 
 
+Contact.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'developer')
 Contact.create("Adrian","Pearman","adrianpearman12@gmail.com", 'Hello!')
 Contact.create("George","Costanza","pretzel@thristy.com", "I was in the pool!")
 Contact.create("Jerry","Seinfeld","whats@thedeal.com", "What's the deal!")

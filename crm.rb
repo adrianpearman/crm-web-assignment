@@ -4,24 +4,51 @@
 
 require 'sinatra'
 require_relative 'contact'
+require 'pry'
 
 
-
-get'/' do
-  @crm_app_name = "Bitmaker's CRM"
+get '/' do
+  @crm_app_name = "Adrian's CRM"
   erb :index
 end
 
-get '/contacts'do
-@crm_contact_name = "Bitmaker CRM"
+get '/contacts' do
+  @crm_app_name = "Adrian's CRM"
   erb :contacts
 end
 
-get '/contacts/new'do
+get '/new_contact' do
+  @crm_app_name = "Adrian's CRM"
   erb :new_contact
 end
 
-post '/contacts'do
-  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
-  redirect t ('/contact')
+get '/contacts/new' do
+  erb :new_contact
+end
+
+get '/contacts/edit' do
+  erb :edit_contact
+end
+
+post '/contacts' do
+# [:first_name], params[:last_name], params[:email], params[:note]
+  Contact.create(params)
+  redirect to ('/contacts')
+end
+
+put '/contacts' do
+  "PUT request: #{params}"
+end
+
+delete '/contacts' do
+  "DELETE request: #{params}"
+end
+
+get '/contacts/:id' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    erb :show_contact
+  else
+    raise Sinatra::NotFound
+  end
 end

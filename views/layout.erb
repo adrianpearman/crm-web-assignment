@@ -4,8 +4,26 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme|Black+Ops+One|Bungee|Bungee+Shade|Creepster|Ewert|Fruktur|Gravitas+One|Monoton|Press+Start+2P|Rubik:900" rel="stylesheet">
   </head>
+
+  <header>
+    <h1> <%= @crm_app_name %> </h1>
+  </header>
+
   <body>
+    <nav>
+      <li class="home_nav"><a href="/">Home</a></li>
+      <li class="home_nav"><a href="/contacts">View all Contacts</a></li>
+      <li class="home_nav"><a href="/contacts/new">Add a New Contact</a></li>
+      <li class="home_nav"><a href="https://bitmaker.co/">About</a></li>
+      <!-- please complete me with links to other actions -->
+    </nav>
+
     <%= yield %>
+
+    <footer>
+    <p>© Adrian Pearman 2017</p>
+    </footer>
   </body>
 </html>
