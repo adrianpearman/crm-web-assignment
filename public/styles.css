@@ -6,13 +6,18 @@
 html{
   text-align: center;
   font-family: arial, sans-serif;
+  font-weight: 1.5em;
+  margin-top: 0;
 }
 
 h1{
   font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 30px;
 }
 
-ul{    
+ul{
   padding-left: 10%;
   padding-right: 10%;
   }
@@ -30,12 +35,14 @@ header{
 
 footer{
   background-color: black;
-  color: white
+  color: white;
+  padding: 15px;
 }
 
 a{
   text-decoration: none;
   color: white;
+  padding:15px;
 }
 
 a:hover{
@@ -43,11 +50,18 @@ a:hover{
   color: #547A9A;
 }
 
+h2.contact_info {
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+}
+
 .home_nav{
   background-color: #D3D3D3;
   color: white;
   margin: 5px;
   width: 100%;
+  padding: 9px;
 }
 
 .contact_details{
