@@ -4,7 +4,7 @@ class Contact
   attr_accessor :first_name, :last_name, :email, :note
 
   @@contacts = []
-  @@id = 0
+  @@id = 1
   # This method should initialize the contact's attributes
   def initialize (first_name,last_name, email, note = "Hello!")
     @first_name = first_name
@@ -32,14 +32,9 @@ class Contact
   # This method should accept an id as an argument
   # and return the contact who has that id
   def self.find(id)
-    # {|contact| contact.id == id}
+    @@contacts.find {|contact| contact.id == id}
 
-    @@contacts.find do |contact|
-      if contact.id == id
-        return contact.id
-        end
-      end
-    return 'Contact does not exist'
+    # return 'Contact does not exist'
   end
 
   def self.count
@@ -109,6 +104,12 @@ class Contact
   end
 
 end
+
+# @@contacts.find do |contact|
+#   if contact.id == id
+#     return contact.id
+#     end
+#   end
 
 
 Contact.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'developer')

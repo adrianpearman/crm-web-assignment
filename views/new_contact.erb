@@ -1,13 +1,43 @@
 <header>
-  <h2>Create new Contact Details</h2>
+  <h2 class="contact_detail">Create new Contact Details</h2>
 </header>
 
-<form action='/contacts' method='post'>
-  <input type='text' name='first_name'>
-  <input type='text' name='last_name'>
-  <input type='text' name='email'>
-  <input type='text' name='note'>
-  <input type='submit' value='New Contact'>
+<form class="add_contact"action='/contacts' method='post'>
+  <fieldset>
+    <li>
+      <label>
+        First Name:
+        <input type='text' name='first_name'>
+      </label>
+    </li>
+
+    <li>
+      <label>
+        Last Name:
+        <input type='text' name='last_name'>
+      </label>
+    </li>
+
+    <li>
+      <label>
+        Email:
+        <input type='text' name='email'>
+      </label>
+    </li>
+
+    <li>
+      <label>
+        Note:
+        <input type='text' name='note'>
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type='submit' value='New Contact'>
+      </label>
+    </li>
+  </fieldset>
 </form>
 
 <br>

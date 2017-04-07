@@ -3,14 +3,16 @@
   <br>
   There are <%= Contact.count %> Contacts
 </h2>
-<% Contact.count %>
+
 <ul>
 <% Contact.all.each do |contact| %>
   <li class="contact_details">
-  <a href="/contacts/:id"><%= contact.first_name %></a>
-  <a href="/contacts/:id"><%= contact.last_name %></a>
-  <a href="/contacts/:id">(<%= contact.email %>)</a>
-  <p class="contact_editor"><a href="#">Edit</a> | <a href="#">Delete</a></p>
+  <%= contact.first_name %> <%= contact.last_name %>
+  (<%= contact.email %>)
+  <p class="contact_editor"><a href="/contacts/edit">Edit</a> | <a href="#">Delete</a> | <a href="/contacts/:id">ID: <%= contact.id %></a></p>
 </li>
 <% end %>
 </ul>
+
+
+<!-- <a href="/contacts/:id"> -->

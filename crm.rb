@@ -2,8 +2,8 @@
 # Do NOT copy the CRM class from the old crm assignment, as it won't work at all for the web-based version!
 # You'll have to implement it from scratch.
 
-require 'sinatra'
 require_relative 'contact'
+require 'sinatra'
 require 'pry'
 
 
@@ -46,9 +46,5 @@ end
 
 get '/contacts/:id' do
   @contact = Contact.find(params[:id].to_i)
-  if @contact
-    erb :show_contact
-  else
-    raise Sinatra::NotFound
-  end
+  erb :show_contact
 end

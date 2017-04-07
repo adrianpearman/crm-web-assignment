@@ -70,7 +70,7 @@ li.home_nav{
 .contact_details{
   background-color: #2AE0D0;
   text-align: left;
-  padding: 10px;
+  padding: 10px 10px 10px 10%;
   margin-bottom: 9px;
 }
 
@@ -80,6 +80,16 @@ li.home_nav{
 
 .home_pictures{
   width: 70%;
+}
+
+.contact_field,
+.add_contact{
+  width: 80%;
+  margin: auto;
+}
+
+.contact_detail{
+  padding: 40px;
 }
 
 p.contact_editor {
