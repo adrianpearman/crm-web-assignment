@@ -30,12 +30,6 @@ get '/contacts/edit' do
   erb :edit_contact
 end
 
-post '/contacts' do
-# [:first_name], params[:last_name], params[:email], params[:note]
-  Contact.create(params)
-  redirect to ('/contacts')
-end
-
 put '/contacts' do
   "PUT request: #{params}"
 end
@@ -44,7 +38,25 @@ delete '/contacts' do
   "DELETE request: #{params}"
 end
 
+
+post '/contacts' do
+# [:first_name], params[:last_name], params[:email], params[:note]
+  Contact.create(params)
+  redirect to ('/contacts')
+end
+
+
+#search for a contact by id
 get '/contacts/:id' do
   @contact = Contact.find(params[:id].to_i)
-  erb :show_contact
+  if @contact
+    erb :show_contact
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+#delete a contact
+get do
+
 end
